@@ -8,17 +8,17 @@ body{
 .main-container{
   display: flex;
   justify-content: center;
-  width: 350px;
+  width: 400px;
   min-height: 350px;
   max-height: auto;
   background-color: antiquewhite;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);}
 .container{
   text-align: center;
 }
 input{
-  width: 200px;
+  width: 250px;
   height: 25px;
   padding-left: 20px;
   cursor: pointer;
@@ -30,29 +30,34 @@ input{
 .addItemBtn:hover{  
   color: red;
 }
-.addInput{
+/* .addInput{
  display: flex;
  justify-content: space-between;
  flex-direction: column;
-}
+} */
 .siftRemove{
  display: flex;
  justify-content: space-between;
  align-items: center;
- width: 250px;
+ width: 300px;
  min-height: 28px;
  max-height: auto;
  background-color: rgb(253, 253, 253);
  padding-left: 20px;
+ padding-right: 20px;
  cursor: pointer;
 
 }
 .remove{
   display: none;
-  height: 27px;
-  width: 30px;
+  min-height: 27px;
+  min-width: 30px;
   border: black;
   cursor: pointer;
+  position: relative;
+  left: 20px;
+  max-width: auto;
+  max-height: auto;
 }
 .siftRemove:hover .remove{
   display: block;

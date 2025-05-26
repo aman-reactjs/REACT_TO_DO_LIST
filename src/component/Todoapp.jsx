@@ -6,6 +6,8 @@ const Todoapp = () => {
     const[input , setInput]= useState('')
     const[userInput, setUserInput]=useState([]);
     const inputRef=useRef()
+    const btnRef = useRef()
+    const removeBtnRef= useRef();
     const handleInput=()=>{
         if(input.trim() !==""){
             setUserInput([...userInput , input])
@@ -29,7 +31,12 @@ const Todoapp = () => {
                 btnRef.current.click()
             }
         }
-    })
+        window.addEventListener("keypress",handleKey)
+        return()=>{
+    
+            window.removeEventListener("keypress",handleKey)
+        }
+    },[])
   return (
    <>
 
@@ -37,10 +44,10 @@ const Todoapp = () => {
     <div className="container">
     <h1>To Do List</h1>
 
-     <input type="text" value={input} placeholder='Enter something...' 
+     <input ref={inputRef} type="text" value={input} placeholder='Enter something...' 
      onChange={(e)=>setInput(e.target.value)}
      />
-     <button className='addItemBtn' onClick={handleInput}>ADD</button>
+     <button ref={btnRef} className='addItemBtn' onClick={handleInput}>ADD</button>
      <div className="addInput">
         {userInput.length>0 && userInput.map((data , i)=>(
             <p className='siftRemove' key={i}>
