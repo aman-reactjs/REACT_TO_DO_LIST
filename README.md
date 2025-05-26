@@ -18,7 +18,8 @@ A simple and elegant To-Do List application built with **React.js**. This projec
 
 ## 📸 Screenshots
 
-![image](https://github.com/user-attachments/assets/5415ab6d-0445-4b47-b220-77a1ab9a0248)
+![image](https://github.com/user-attachments/assets/51339430-cb9e-4c50-9523-af9694eddebc)
+
 
 
 ## 📦 Installation
